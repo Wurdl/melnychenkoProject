@@ -1,0 +1,702 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+a, ul{
+    text-decoration: none;
+    list-style: none;
+}
+
+.autoscale img {
+    width: 100%;
+    height: auto;
+}
+
+/* Header */
+
+.header-wrapper{
+    padding-top: 80px;
+    width: 65%;
+    height: 130px;
+    margin: auto;
+    position: relative;
+    display: flex;
+    padding-bottom: 100px;
+}
+
+.header-left img{
+    width: 200px;
+    height: 64px;
+}
+
+.header-left p{
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-top: 23px;
+}
+
+.header-right{
+    justify-content: end;
+    justify-content: space-between;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-right-text{
+    display: flex;
+    justify-content: end;
+}
+
+.header-right-text p{
+    font-size: 10px;
+    text-align: end;
+    margin-bottom: 0px;
+    padding-top: 5px;
+}
+
+.header-right-text img{
+    height: 40px;
+    width: 40px;
+    margin-left: 20px;
+    
+}
+
+.header-right-menu{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
+    margin-top: 28px;
+}
+
+.header-right-menu a{
+    color: black;
+    padding-right: 0px;
+    padding-left: 40px;
+}
+
+.nav-link1{
+    background-color: #6ea0a0;
+    padding: 5px !important;
+    margin-left: 40px;
+    color: white !important;
+    font-weight: bolder;
+  
+}
+
+.hidden{
+    visibility: hidden;
+    height: 0;
+}
+
+@media only screen and (max-width: 1333px){
+    .header-right-menu{
+        visibility: hidden;
+    }
+
+    .header-right-text{
+        visibility: hidden;
+    }
+
+    .header-wrapper{
+        padding-top: 47px;
+    }
+
+    /* Hamburger Menu*/
+
+    .hidden{
+        visibility: visible;
+    }
+    
+    .ham {
+        position: absolute;
+        /* always keep ham on top of everything */
+        z-index: 1000;
+        top: 32px;
+        right: 10px;
+        width: 56px;
+        height: 56px;
+        border: none;
+        cursor: pointer;
+        background-color: transparent;
+        background-image: url("https://ljc-dev.github.io/testing0/ham.svg");
+        background-size: 100%;
+    }
+    
+    
+    /* change ham image to close */
+    .showClose {
+        background-image: url("https://ljc-dev.github.io/testing0/ham-close.svg");
+    }
+    
+    .navbar {
+        position: absolute !important;
+        z-index: 999;
+        top: -100vh;
+        left: -100vh;
+        background: #6ea0a0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        color: white;
+        /* hide the menu above the screen by default */
+        /* transform: translateY(-100%); */
+        /* transition adds a little animation when sliding in and out the menu */
+        transition: transform 0.2s ease;
+    }
+    
+    
+    .showNav {
+        /* show the menu */
+        top: 0;
+        left: 0;
+        /* transform: translateY(0); */
+    }
+    
+    /* basic nav styling below */
+    
+    .navbar ul {
+        width: 100%;
+        height: 100%;
+        list-style: none;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    .navbar ul li a {
+        color: white;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #6ea0a0;
+        text-decoration: none;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.2rem;
+    }
+    
+    .navbar ul li a:hover, .navbar ul li a:focus {
+        border-bottom: 2px solid white;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .header-wrapper{
+        width: 100%;
+    }
+
+    .header-left{
+        margin-left: 20px;
+    }
+
+    .header-left img{
+        height: 40px;
+        width: 130px;
+    }
+
+    .header-left p{
+        visibility: hidden;
+        height: 0;
+    }
+
+    .main-slider{
+        padding-top: 0 !important;
+    }
+
+}
+/* Main Slider Section */
+
+.main-slider{
+    width: 65%;
+    margin: auto;
+    padding-top: 50px;
+}
+
+.single-item{
+    height: 100%;
+    width: auto;
+}
+
+.single-list img
+{
+    width: auto;
+}
+
+.main-slider-img{
+    width: 100%;
+    height: 550px;
+    overflow: hidden;
+}
+
+.main-slider-img h4{
+    font-size: 50px;
+    font-weight: 100;
+}
+
+.main-slider-img {
+    background-size: cover;
+    background-position: center;
+    height: 550px !important;
+}
+
+.main-slider {
+    position: relative;
+}
+
+.sprachen {
+    display: inline-block;
+    font-size: 30px;
+    background-color: white;
+    margin-left: 120px;
+    text-transform: uppercase;
+}
+
+.main-slider-img p{
+    display: inline-block;
+    background-color: #6ea0a0;
+    color: white;
+    margin-left: 120px;
+    padding: 0 10px;
+    font-weight: bold;
+}
+
+.decoration-border-right{
+    top: 25px;
+    right: -25px;
+    border-right: 2px solid grey;
+    border-top: 2px solid grey;
+    border-bottom: 2px solid grey;
+    width: 25px;
+    height: 600px;
+    position: absolute;
+}
+
+.decoration-border-left{
+    top: 25px;
+    left: -25px;
+    border-left: 2px solid grey;
+    border-top: 2px solid grey;
+    border-bottom: 2px solid grey;
+    width: 25px;
+    height: 600px;
+    position: absolute;
+}
+
+.arrow-down{
+    background-image: url(Bilder/chevron-compact-down.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    left: calc(50% - 35px);
+    height: 40px;
+    bottom: -80px;
+    width: 70px;
+}
+
+#text-melnychenko{
+    margin: 150px 0; 
+    text-align: center;
+}
+
+#text-melnychenko h4{
+    font-size: 38px;
+}
+
+.main-slider-text{
+    position: absolute;
+    z-index: 1;
+    top: 20%;
+}
+
+.main-slider-text h1{
+    font-size: 38px;
+    font-weight: 200;
+    padding: 0 10px;
+}
+
+.main-slider-text p a{
+    display: inline-block;
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: 50px;
+    margin-left: 120px;
+    padding: 2px 10px;
+    color: white;
+    background-color:#6ea0a0;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+/* media */
+@media only screen and (max-width: 1333px){
+    .main-slider-img h4{
+        font-size: 25px;
+        font-weight: 50;
+    }
+
+
+    .main-slider-img p{
+        display: inline-block;
+        background-color: #6ea0a0;
+        color: white;
+        margin-left: 30px !important;
+        padding: 0 10px;
+        font-weight: bold;
+    }
+}
+
+@media only screen and (max-width: 500px)
+{
+    .decoration-border-left, .decoration-border-right
+    {
+        visibility: hidden;
+    }
+
+    .main-slider{
+        width: 100%;
+        margin: auto;
+        padding-top: 50px;
+    }
+
+    .main-slider-img{
+        height: 300px !important;
+    }
+
+    .main-slider-text{
+        top: 10%;
+    }
+}
+
+@media only screen and (max-width: 930px)
+{
+    .sprachen{
+        margin-left: 50px;
+    }
+
+    .main-slider-text h4{
+        font-size: 40px;
+    }
+
+    .main-slider-text p a{
+        margin-left: 50px;
+    }
+}
+
+/* Leistungen - Cards */
+ .leistungen-wrapper{
+    width: 65%;
+    margin: auto;
+    padding-bottom: 150px;
+}
+
+.leistungen-card-margin{
+    padding-left: 0 !important;
+}
+
+.leistungen-border{
+    padding: 30px 0;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
+
+.leistungen-background{
+    display: inline-block;
+    background-color: #6ea0a0;
+    font-size: 18px;
+    color: white;
+    margin-top: 35px;
+    padding: 0 4px;
+    font-weight: bold;
+}
+
+.leistungen-bold-h1{
+    font-size: 33px;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 500px){
+    .leistungen-border{
+        border-bottom: none;
+    }
+}
+
+/* Kundenreferenzen */
+.kundenreferenzen-wrapper{
+    width: 50%;
+    height: 300px;
+    margin: auto;
+    justify-content: space-between;
+}
+.kundenreferenzen-title{
+    margin-top: 150px;
+    text-align: center;
+}
+.kundenreferenzen-title h3{
+    font-weight: bold;
+}
+
+.slick-track{
+    width: 200px;
+}
+
+.slick-list .draggable{
+    width: 1000px;
+}
+
+/* Border */
+
+#border{
+    width: 65%;
+    margin: auto;
+    padding-bottom: 100px;
+}
+
+.bottom-border{
+    height: 100px;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom-border-line{
+    width: 60%;
+    border-bottom: 1px solid #6ea0a0;
+}
+
+.bottom-border-arrow-down{
+    background-image: url(Bilder/chevron-compact-down.svg);
+    width: 100px;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 50px;   
+}
+
+@media only screen and (max-width: 1199px){
+    .bottom-border-arrow-down{
+        margin: 0 15px;
+        height: 74px;
+    }
+}
+
+
+@media only screen and (max-width: 500px)
+{
+    .kundenreferenzen-wrapper{
+        width: 70%;
+    }
+}
+
+/* Slick Buttons */
+.slick-prev{
+    left: -50px !important;
+}
+
+.slick-next{
+    right: -50px !important;
+}
+
+.slick-button{
+    height: 50px !important;
+    width: 50px !important;
+    z-index: 500;
+}
+
+/* Melnychenko info */
+
+.melnychenko-info{
+    margin-bottom: 200px;
+}
+
+.melnychenko-info-h2{
+    font-weight: bold;
+    font-size: 42px;
+    margin-bottom: 35px;
+}
+
+.melnychenko-info-h4{
+    font-weight: bold;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.melnychenko-info-kompetenzen{
+    background-color: #6ea0a0;
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+    padding: 0 5px;
+}
+
+@media only screen and (max-width: 992px){
+    .info-img{
+        margin-bottom: 100px;
+    }
+}
+
+@media only screen and (max-width: 500px)
+{
+    .melnychenko-info-h2
+    {
+        font-size: 35px;
+    }
+
+    .melnychenko-info-h4
+    {
+        font-size: 30px;
+    }
+
+    .melnychenko-info{
+        margin-bottom: 100px;
+    }
+}
+
+/* Footer images */
+.footer-images{
+    width: 100%;
+}
+
+.footer-images .row .col{
+    padding: 0;
+}
+
+@media only screen and (max-width: 500px){
+    .footer-images{
+        display: none;
+    }
+}
+
+/* Footer */
+.footer{
+    width: 100%;
+    background-color: #6ea0a0;
+}
+
+.footer-main{
+    width: 65%;
+    margin: auto;
+}
+
+.padding-0{
+    padding: 0 !important;
+}
+.col-sm-2{
+    padding: 0 !important;
+}
+.col-sm-4{
+    padding: 0 !important;
+}
+.footer-row{
+    height: 190px;
+}
+
+.footer-row-sm{
+    height: 90px;
+}
+
+.font-white-center{
+    color: white;
+    text-align: center;
+    font-size: 33px;
+}
+
+.align-items{
+    align-items: center;
+}
+
+.align-end{
+    align-self:flex-start;
+}
+
+.col-sm-2 p{
+    margin-bottom: 0;
+}
+
+.col-sm-2 p a{
+    color: white;
+}
+
+.footer-color-margin p{
+    margin-bottom: 0;
+}
+
+.footer-color-margin p a{
+    color: white;
+}
+
+.img-width {
+    width: 100%;
+    height: auto;
+}
+
+.img-50height{
+    height: 100px;
+    width: auto;
+}
+
+.footer-border-bottom{
+    border-bottom: 1px solid white;
+}
+
+.footer-padding-0 div{
+    padding-left: 0;
+}
+
+.footer-row-3 div p{
+    color: white;
+}
+
+.footer-row-3 div p a{
+    font-size: 16px;
+    color: white;
+}
+
+@media only screen and (max-width: 768px){
+    .img-margin-mobile{
+        margin: 20px 0;
+    }
+
+    .row-height-mobile{
+        height: 500px;
+    }
+    
+    .img-width-mobile{
+        width: 80% !important;
+        height: auto !important;
+    }
+
+    .font-white-center{
+        text-align: left;
+    }
+
+    
+
+    .footer-padding-0 div{
+        padding-left: 20px;
+    }
+
+    .footer-inline{
+        display: inline-block;
+    }
+    
+    .padding-0{
+        padding-left: 15px !important;
+    }
+
+    .footer-row-sm{
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 992px) and (min-width: 768px) 
+{
+    .footer-row{
+        height: 220px;
+    }
+}
+
+

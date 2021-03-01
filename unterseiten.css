@@ -1,0 +1,99 @@
+
+/* Unterseiten */
+.unterseite-slider-wrapper{
+    height: 1000px;
+}
+@media only screen and (max-width: 500px){
+    .unterseite-slider-wrapper{
+        height: 500px;    
+    }
+}
+
+/* Leistungen */
+
+.leistungen-cards-wrapper .row{
+    margin-bottom: 40px;
+}
+
+#dolmetschen{
+    display: flex;
+    align-items: center;
+}
+
+#uebersetzen{
+    display: flex;
+    align-items: center;
+}
+
+.leistungen-header-text h2{
+    display: inline-block;
+    font-size: 40px;
+    font-weight: 600;
+    background-color: #6ea0a0;
+    color: white;
+    padding: 2px 6px;
+}
+
+.leistungen-header-text h3{
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.leistungen-header-text p{
+    padding-top: 20px;
+}
+
+
+
+/* Dolmetschen */
+
+.dolmetschen-img-warpper
+{
+    height: 300px;
+    width: auto;
+    background-image: url('Bilder/melnychenko-0137-web.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* Übersetzen */
+
+.uebersetzen-img-wrapper{
+    height: 300px;
+    width: auto;
+    background-image: url('Bilder/1_Melnychenko_Nataliya-web.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.uebersetzen-right{
+    text-align: right;
+}
+
+/* lektorieren */
+
+.lektorieren-img-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lektorieren-images img{
+    height: 200px;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+
+/* Media */
+
+@media only screen and (max-width: 500px)
+{
+    .unterseite-img-wrapper{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .lektorieren-images{
+        margin-top: 50px;
+    }
+}
